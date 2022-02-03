@@ -1,0 +1,291 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        font-family: 'Montserrat', sans-serif;
+        overflow-x: hidden;
+    }
+    
+    header {
+        padding: 5px 10px;
+        font-family: 'Poppins';
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgb(246, 247, 245);
+        /* background-color: rgba(209, 214, 218, 255); */
+        font-size: small;
+    }
+    
+    .section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    nav {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        overflow: hidden;
+        top: 0;
+        width: 100%;
+        right: -100%;
+    }
+    
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        width: 30%;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+    
+    nav ul li a:hover {
+        color: rgb(232, 255, 149);
+    }
+    
+    .active {
+        color: rgb(232, 255, 149);
+    }
+    
+    .navbar-brand {
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 5px;
+        font-size: 30px;
+    }
+    
+    .banner {
+        /* background-image: url(https://images.unsplash.com/photo-1621409443141-46c42dc0afb5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8ZnJ1aXR8fHx8fHwxNjM4MjM4OTA3&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1500); */
+        background-image: url(https://source.unsplash.com/1500x900/?fruit);
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        position: relative;
+        height: 650px;
+    }
+    
+    .banner::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .container-product {
+        width: 33, 33%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .banner h1 {
+        color: white;
+        font-size: 40px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        padding-top: 300px;
+        text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+        position: relative;
+        z-index: 1;
+    }
+    
+    .banner h2 {
+        color: white;
+        font-size: 20px;
+        font-family: 'Monserrat', sans-serif;
+        font-weight: 200;
+        text-align: center;
+        text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+        position: relative;
+        z-index: 1;
+    }
+    
+    .section h1 {
+        padding-top: 20px;
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+    }
+    
+    .card {
+        margin: 40px 15px;
+        position: relative;
+        width: 270px;
+        height: 440px;
+        border-radius: 20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        background: #26242e;
+        overflow: hidden;
+    }
+    
+    .card img {
+        z-index: 1;
+    }
+    /* .container::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: 50px;
+        width: 300px;
+        height: 300px;
+        background: url(img/jus_alpukat.jpg) center / cover;
+        opacity: .1;
+    } */
+    
+    .card-product {
+        position: absolute;
+        z-index: 1;
+        bottom: 15px;
+        width: 240px;
+        height: 230px;
+        color: black;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 10px 10px 15px 15px;
+        backdrop-filter: blur(4px);
+        background: rgba(255, 255, 255, .2);
+        border: 1px solid rgba(255, 255, 255, .3);
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .card-product h4 {
+        padding: 5px;
+        font-size: 20px;
+        color: white;
+    }
+    
+    .card-product p {
+        padding: 5px;
+        font-size: 13px;
+        color: #a6a6a6;
+    }
+    
+    .about-us {
+        padding: 50px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .about-us img {
+        padding-left: 50px;
+        flex: 0.5;
+    }
+    
+    .keterangan {
+        padding-left: 30px;
+        padding-right: 200px;
+        flex-direction: column;
+        flex: 1;
+    }
+    
+    .keterangan h3 {
+        font-family: 'Poppins', sans-serif;
+        text-align: justify;
+        letter-spacing: 5px;
+        font-size: 30px;
+    }
+    
+    footer h1 {
+        padding-top: 30px;
+        font-size: 30px;
+        padding: 15px 15px;
+        color: #a6a6a6;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        background-color: rgba(52, 58, 64, 255);
+    }
+    
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        color: #a6a6a6;
+        background-color: rgba(52, 58, 64, 255);
+    }
+    
+    .footer-items {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    .footer-items>* {
+        justify-content: space-between;
+        padding: 10px;
+    }
+    
+    .copyright {
+        padding: 30px;
+        background-color: rgba(33, 37, 41, 255);
+        color: #a6a6a6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    @media screen and (max-width: 768px) {
+        nav ul {
+            width: 50%;
+        }
+        .banner {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width: 1024px) {
+        nav ul {
+            width: 50%;
+        }
+    }
+    
+    @media screen and (max-width: 576px) {
+        header {
+            font-size: 10px;
+        }
+        nav ul {
+            flex-direction: column;
+            justify-content: space-evenly;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            z-index: -1;
+        }
+        .banner {
+            height: 300px;
+            position: relative;
+            z-index: -2;
+        }
+        .banner h1 {
+            margin-bottom: 150px;
+            font-size: 20px;
+        }
+        .container-product {
+            width: 100%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-items,
+        .copyright {
+            font-size: 11px;
+        }
+    }
