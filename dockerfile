@@ -1,5 +1,5 @@
 # Gunakan image PHP yang mendukung Laravel (contoh: php:7.4-apache)
-FROM php:7.4-apache
+FROM php:7.4
 
 # Set direktori kerja di dalam container
 WORKDIR /var/www/html
@@ -29,4 +29,4 @@ RUN php artisan key:generate
 EXPOSE 80
 
 # Menjalankan server Apache
-CMD ["apache2-foreground"]
+CMD ["php", "-S", "0.0.0.0:80"]
