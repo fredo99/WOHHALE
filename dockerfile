@@ -3,7 +3,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer install --no-scripts --no-autoloader
 RUN php artisan key:generate
 COPY wohhale /var/www/html/wohhale
-COPY composer.json composer.lock ./
 WORKDIR /var/www/html/wohhale
 EXPOSE 80
 CMD ["php", "-S", "0.0.0.0:80"]
