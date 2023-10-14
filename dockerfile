@@ -25,7 +25,6 @@ RUN composer install --no-scripts --no-autoloader && \
 
 # Menghasilkan kunci aplikasi Laravel
 RUN php artisan key:generate
-RUN php artisan serve
 
 # Expose port 80
 EXPOSE 80
