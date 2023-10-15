@@ -2,7 +2,7 @@
 FROM php:8.0
 
 # Set direktori kerja di dalam container
-WORKDIR /var/www/html
+WORKDIR /var/www/html/wohhale
 
 # Install dependensi yang diperlukan oleh Laravel
 RUN apt-get update \
@@ -16,7 +16,7 @@ RUN apt-get update \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Salin file proyek Laravel ke dalam container
-COPY . /var/www/html
+COPY . /var/www/html/wohhale/
 
 # Install dependencies dan mengoptimalkan autoload
 RUN composer install --no-scripts --no-autoloader \
