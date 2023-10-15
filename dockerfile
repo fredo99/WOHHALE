@@ -62,10 +62,6 @@ RUN chown -R www-data:www-data *
 RUN a2enmod proxy
 RUN a2enmod proxy_http
 
-# Copy konfigurasi PHP dan Apache khusus jika diperlukan
-COPY php.ini /usr/local/etc/php/
-COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
-
 # Restart Apache
 RUN service apache2 restart
 
