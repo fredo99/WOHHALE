@@ -33,7 +33,7 @@
 # # Menjalankan server Apache
 # CMD ["php", "-S", "0.0.0.0:80"]
 # Use an official PHP runtime as a parent image
-FROM php:7.4-apache
+FROM php:8.0-apache
 
 # Set the working directory in the container
 WORKDIR /var/www/html/wohhale
