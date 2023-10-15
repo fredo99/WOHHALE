@@ -39,10 +39,10 @@ FROM php:8.0-apache
 WORKDIR /var/www/html/wohhale
 
 # Install dependencies and enable required modules
-RUN apt-get update && \
-    apt-get install -y git zip unzip && \
-    docker-php-ext-install pdo_mysql && \
-    a2enmod rewrite
+# RUN apt-get update && \
+#     apt-get install -y git zip unzip && \
+#     docker-php-ext-install pdo_mysql && \
+#     a2enmod rewrite
 
 # Copy the composer.json and composer.lock files
 COPY composer.json composer.lock ./
