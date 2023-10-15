@@ -36,7 +36,7 @@
 FROM php:7.4-apache
 
 # Set the working directory in the container
-WORKDIR /var/www/html
+WORKDIR /var/www/html/wohhale
 
 # Install dependencies and enable required modules
 RUN apt-get update && \
@@ -55,8 +55,9 @@ RUN composer install --no-scripts --no-autoloader
 COPY . .
 
 # Set permissions
-RUN chmod -R 755 /var/www/html \
-    && chmod -R 775 /var/www/html/storage
+RUN chmod -R 755 /var/www/html/wohhale \
+    && chmod -R 775 /var/www/html/wohhale/storage
+RUN chown -R www-data:www-data *
 
 # Generate the optimized autoloader and clear the cache
 RUN composer dump-autoload --optimize && \
