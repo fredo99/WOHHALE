@@ -59,6 +59,9 @@ RUN composer dump-autoload --optimize && \
     php artisan config:cache && \
     php artisan route:cache
 
+RUN php artisan key:generate
+
+
 # Expose port 80
 EXPOSE 80
 
