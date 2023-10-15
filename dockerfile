@@ -52,7 +52,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer install --no-scripts --no-autoloader
 
 # Copy the rest of the application code
-COPY . .
+COPY . /var/www/html/wohhale/
 
 # Set permissions
 RUN chmod -R 755 /var/www/html/wohhale \
