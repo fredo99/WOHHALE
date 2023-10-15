@@ -59,6 +59,16 @@ RUN chmod -R 755 /var/www/html/wohhale \
     && chmod -R 775 /var/www/html/wohhale/storage
 RUN chown -R www-data:www-data *
 
+RUN a2enmod proxy
+RUN a2enmod proxy_http
+
+# Copy konfigurasi PHP dan Apache khusus jika diperlukan
+COPY php.ini /usr/local/etc/php/
+COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
+
+# Restart Apache
+RUN service apache2 restart
+
 # Generate the optimized autoloader and clear the cache
 RUN composer dump-autoload --optimize && \
     php artisan config:cache && \
@@ -68,7 +78,7 @@ RUN php artisan key:generate
 
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 8080
 
 # Start Apache
 CMD ["apache2-foreground"]
