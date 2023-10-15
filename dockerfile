@@ -54,6 +54,10 @@ RUN composer install --no-scripts --no-autoloader
 # Copy the rest of the application code
 COPY . .
 
+# Set permissions
+RUN chmod -R 755 /var/www/html \
+    && chmod -R 775 /var/www/html/storage
+
 # Generate the optimized autoloader and clear the cache
 RUN composer dump-autoload --optimize && \
     php artisan config:cache && \
