@@ -1,5 +1,5 @@
 # Gunakan image PHP yang mendukung Laravel (contoh: php:7.4-apache)
-FROM php:latest
+FROM php:8.0
 
 # Set direktori kerja di dalam container
 WORKDIR /var/www/html
